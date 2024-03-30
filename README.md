@@ -6,7 +6,7 @@ Implement a Docker Compose manifest, which creates a container with the database
 
 #### MySQLComposeFile.yaml
 
-```http
+```
 version: '3.1'
 services:
   mySqlDatabase:
