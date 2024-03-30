@@ -1,0 +1,36 @@
+# version: '3.1'
+# services:
+#   mySqlDatabase:
+#     image: mysql
+#     ports:
+#       - 8080: 8080
+#     # env_file:
+#     #   - environment.env
+#     environment:
+#       MYSQL_ROOT_PASSWORD: password
+
+
+
+# version: '3.1'
+# services:
+#   mySqlDatabase:
+#     image: mysql
+#     ports:
+#       - 8080:${PORT}
+#     environment:
+#       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+
+version: '3.1'
+services:
+  mySqlDatabase:
+    image: mysql
+    ports:
+      - 8080:${PORT}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes: 
+      - db-data:/data/db
+volumes:
+  db-data:
+    driver: local
